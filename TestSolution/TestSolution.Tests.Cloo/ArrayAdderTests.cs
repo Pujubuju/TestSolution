@@ -30,11 +30,6 @@ namespace TestSolution.Tests.Cloo
 
         [TestCase(100)]
         [TestCase(1000)]
-        [TestCase(10000)]
-        [TestCase(100000)]
-        [TestCase(1000000)]
-        [TestCase(10000000)]
-        [TestCase(100000000)]
         public void Arrays_adding_speed_comaprison(int arraySize)
         {
             //SetUp

@@ -51,10 +51,6 @@
       <Project>{a240a8a5-6c02-4e34-962e-f3e1a99f65ac}</Project>
       <Name>TestSolution.Tests.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TestSolution.Cudafy\TestSolution.Cudafy.csproj">
-      <Project>{23db7de2-78c9-4914-853a-be3a4e38307a}</Project>
-      <Name>TestSolution.Cudafy</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

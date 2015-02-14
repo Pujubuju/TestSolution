@@ -45,9 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\Enums.cs" />
     <Compile Include="Components\TrackPoint.cs" />
-    <Compile Include="Components\TrackPointResult.cs" />
     <Compile Include="Components\TrackQuery.cs" />
     <Compile Include="CudafyByExample.cs" />
     <Compile Include="CudafyExposer.cs" />
