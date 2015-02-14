@@ -1,0 +1,26 @@
+﻿<h2>List - Home</h2>
+<ul>
+    @{
+        foreach (var task in @Html.ViewData.Model.Tasks)
+        {
+            
+            
+            
+            <li>
+                
+                <h>Name: 
+                    <b>@task.Name</b>
+                </h>
+
+                <p>
+                    <br>Description: @task.Description
+                    <br>Estimated time: @task.EstimatedTime
+                </p>
+            </li>
+            
+            
+            
+        }
+}
+</ul>
+
