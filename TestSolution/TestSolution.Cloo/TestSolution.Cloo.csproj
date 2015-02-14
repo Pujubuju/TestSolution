@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Math\ArrayAdder.cs" />
-    <Compile Include="ClooTutorial.cs" />
     <None Include="Kernels\floatVectorMultiplication.cl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
