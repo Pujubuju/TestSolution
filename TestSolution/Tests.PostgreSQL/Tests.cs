@@ -9,7 +9,7 @@ using TestSolution.Tests.Common;
 namespace TestSolution.Tests.PostgreSQL
 {
     [TestFixture]
-    public class Tests : BaseTestClass
+    public class Tests : BaseTest
     {
         public override void TestFixtureSetUp()
         {

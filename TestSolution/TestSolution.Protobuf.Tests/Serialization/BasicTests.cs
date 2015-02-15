@@ -6,7 +6,7 @@ using TestSolution.Tests.Common;
 
 namespace TestSolution.Tests.Protobuf.Serialization
 {
-    public class BasicTests : BaseTestClass
+    public class BasicTests : BaseTest
     {
 
         private class BasicSerializableClass

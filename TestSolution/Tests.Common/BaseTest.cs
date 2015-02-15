@@ -4,7 +4,7 @@ namespace TestSolution.Tests.Common
 {
 
     [TestFixture]
-    public class BaseTestClass
+    public class BaseTest
     {
         [SetUp]
         public virtual void SetUp()

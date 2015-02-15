@@ -13,7 +13,7 @@ namespace TestSolution.Tests.Cloo
 {
     
     [RequiresSTA]
-    public class ArrayMultiplicatorTests : BaseTestClass
+    public class ArrayMultiplicatorTests : BaseTest
     {
 
         [Test]

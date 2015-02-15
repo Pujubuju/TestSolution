@@ -6,7 +6,7 @@ using TestSolution.Tests.Common;
 
 namespace TestSolution.Tests.Cloo
 {
-    public class DeviceFinderTests : BaseTestClass
+    public class DeviceFinderTests : BaseTest
     {
 
         [Test]
