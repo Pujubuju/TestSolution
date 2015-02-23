@@ -27,7 +27,6 @@ namespace TestSolution.Common
 
         #endregion Constructor
 
-
         #region Methods
 
         public int Next()
