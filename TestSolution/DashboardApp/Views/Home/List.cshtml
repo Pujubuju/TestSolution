@@ -1,26 +1,36 @@
-﻿<h2>List - Home</h2>
-<ul>
-    @{
-        foreach (var task in @Html.ViewData.Model.Tasks)
-        {
-            
-            
-            
-            <li>
-                
-                <h>Name: 
-                    <b>@task.Name</b>
-                </h>
+﻿
+<head>
+    <title>List</title>
+    <link href="..\..\Scripts/bootstrap.js" rel="stylesheet">
+</head>
 
-                <p>
-                    <br>Description: @task.Description
-                    <br>Estimated time: @task.EstimatedTime
-                </p>
-            </li>
-            
-            
-            
+<h2>List - Home</h2>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Estimated time</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var task in @Html.ViewData.Model.Tasks)
+            {
+                <tr class="success">
+                    <td>@task.Id</td>
+                    <td>@task.Name</td>
+                    <td>@task.Description</td>
+                    <td>@task.EstimatedTime</td>
+                    <td><button type="button" class="btn btn-info">Info</button></td>
+                    <td>@Html.ActionLink("Details", "Details", "Home", new { taskId = task.Id }, new { @class = "btn btn-info" })</td>
+                </tr>
+            }
+
         }
-}
-</ul>
+    </tbody>
+</table>
 

@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DashboardApp.DAL", "Dashboa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DashboardApp.Common", "DashboardApp.Common\DashboardApp.Common.csproj", "{C83065D8-9C84-447A-9B01-40E6740E0513}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSolution.SQLServer", "TestSolution.SQLServer\TestSolution.SQLServer.csproj", "{2DEA7FB4-40F2-417E-9C15-632353D40855}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,12 @@ Global
 		{C83065D8-9C84-447A-9B01-40E6740E0513}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C83065D8-9C84-447A-9B01-40E6740E0513}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C83065D8-9C84-447A-9B01-40E6740E0513}.Release|x86.ActiveCfg = Release|Any CPU
+		{2DEA7FB4-40F2-417E-9C15-632353D40855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DEA7FB4-40F2-417E-9C15-632353D40855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DEA7FB4-40F2-417E-9C15-632353D40855}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2DEA7FB4-40F2-417E-9C15-632353D40855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DEA7FB4-40F2-417E-9C15-632353D40855}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DEA7FB4-40F2-417E-9C15-632353D40855}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -174,5 +182,6 @@ Global
 		{65A84802-048D-4CB6-87A5-63CD3EF4B4B3} = {90765466-5061-46BD-A9B3-475EEB67AD31}
 		{DEC23099-2C36-46E3-9C04-F16001A2E1E6} = {90765466-5061-46BD-A9B3-475EEB67AD31}
 		{C83065D8-9C84-447A-9B01-40E6740E0513} = {90765466-5061-46BD-A9B3-475EEB67AD31}
+		{2DEA7FB4-40F2-417E-9C15-632353D40855} = {F37590FB-5B88-4BF5-A3E9-00C037ACA6F0}
 	EndGlobalSection
 EndGlobal

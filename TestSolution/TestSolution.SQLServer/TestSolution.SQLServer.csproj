@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{65A84802-048D-4CB6-87A5-63CD3EF4B4B3}</ProjectGuid>
+    <ProjectGuid>{2DEA7FB4-40F2-417E-9C15-632353D40855}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DashboardApp.BLL</RootNamespace>
-    <AssemblyName>DashboardApp.BLL</AssemblyName>
+    <RootNamespace>TestSolution.SQLServer</RootNamespace>
+    <AssemblyName>TestSolution.SQLServer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,19 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ITasksService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TasksService.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DashboardApp.Common\DashboardApp.Common.csproj">
-      <Project>{c83065d8-9c84-447a-9b01-40e6740e0513}</Project>
-      <Name>DashboardApp.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DashboardApp.DAL\DashboardApp.DAL.csproj">
-      <Project>{dec23099-2c36-46e3-9c04-f16001a2e1e6}</Project>
-      <Name>DashboardApp.DAL</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
