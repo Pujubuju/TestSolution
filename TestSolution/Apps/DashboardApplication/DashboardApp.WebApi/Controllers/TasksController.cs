@@ -45,5 +45,22 @@ namespace DashboardApp.WebApi.Controllers
             return Ok(task);
         }
 
+        [HttpPut]
+        public IHttpActionResult PutTask(Task task)
+        {
+            if (task == null)
+            {
+                return NotFound();
+            }
+            _tasksService.Modify(task);
+            return Ok(task);
+        }
+
+        [HttpDelete]
+        public IHttpActionResult DeleteTask(Guid id)
+        {
+            _tasksService.Delete(id);
+            return Ok(id);
+        }
     }
 }

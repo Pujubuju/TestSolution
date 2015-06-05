@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using DashboardApp.Common.Models;
 
 namespace DashboardApp.BLL
@@ -7,5 +8,8 @@ namespace DashboardApp.BLL
     {
         IEnumerable<Task> Tasks { get; }
         void Add(Task task);
+        bool Exists(Guid id);
+        void Delete(Guid id);
+        void Modify(Task task);
     }
 }

@@ -24,6 +24,22 @@
         <input type="button" value="Search" onclick="post();" />
         <p id="postTask" />
     </div>
+    
+    <div>
+        <h2>Edit task</h2>
+        <input type="text" id="taskIdEdit" />
+        <input type="text" id="taskNameEdit" />
+        <input type="text" id="taskDescriptionEdit" />
+        <input type="button" value="Search" onclick="edit();" />
+        <p id="putTask" />
+    </div>
+    
+    <div>
+        <h2>Remove task</h2>
+        <input type="text" id="taskIdRemove" />
+        <input type="button" value="Search" onclick="delteTask();" />
+        <p id="removeTask" />
+    </div>
 
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
     <script>
@@ -67,7 +83,6 @@
         $.ajax({
             type: "POST",
             url: uri,
-            // The key needs to match your method's input parameter (case-sensitive).
             data: JSON.stringify({ Name: name, Description : description }),
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -79,8 +94,48 @@
                 $('#postTask').text('Error: ' + err);
             }
         });
-
     }
+
+    function edit() {
+        var id = $('#taskIdEdit').val();
+        var name = $('#taskNameEdit').val();
+        var description = $('#taskDescriptionEdit').val();
+
+        $.ajax({
+            type: "PUT",
+            url: uri,
+            data: JSON.stringify({ Id : id, Name: name, Description: description }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                $('#putTask').text('OK: ' + data);
+                loadTasks();
+            },
+            failure: function (err) {
+                $('#putTask').text('Error: ' + err);
+            }
+        });
+    }
+
+    function delteTask() {
+        var id = $('#taskIdRemove').val();
+
+        $.ajax({
+            type: "DELETE",
+            url: 'api/tasks/' + id,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                $('#removeTask').text('OK: ' + data);
+                loadTasks();
+            },
+            failure: function (err) {
+                $('#removeTask').text('Error: ' + err);
+            }
+        });
+    }
+
+
     </script>
 </body>
 </html>
