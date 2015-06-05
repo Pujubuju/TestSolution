@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Product App</title>
+    <title>Dashboard App</title>
 </head>
 <body>
 
@@ -9,29 +9,46 @@
         <h2>All Tasks</h2>
         <ul id="tasks" />
     </div>
+
     <div>
         <h2>Search by ID</h2>
         <input type="text" id="prodId" size="5" />
         <input type="button" value="Search" onclick="find();" />
         <p id="foundTask" />
     </div>
+    
+    <div>
+        <h2>Add new task</h2>
+        <input type="text" id="taskName" />
+        <input type="text" id="taskDescription" />
+        <input type="button" value="Search" onclick="post();" />
+        <p id="postTask" />
+    </div>
 
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
     <script>
-    var uri = 'api/tasks';
-    $(document).ready(function () {
-      $.getJSON(uri)
-          .done(function (data) {
-            $.each(data, function (key, item) {
-                $('<li>', { text: formatItem(item) }).appendTo($('#tasks'));
-            });
-          });
-    });
+        var uri = 'api/tasks';
+
+        function clearTasksList() {
+            $($('#tasks')).empty();
+        }
+
+        function loadTasks() {
+            clearTasksList();
+            $.getJSON(uri)
+                .done(function (data) {
+                    $.each(data, function (key, item) {
+                        $('<li>', { text: formatItem(item) }).appendTo($('#tasks'));
+                    });
+                });
+        }
+
+        $(document).ready(loadTasks);
 
     function formatItem(item) {
         return item.Name + ', ' + item.Description + ', ' + item.Id;
     }
-
+    
     function find() {
       var id = $('#prodId').val();
       $.getJSON(uri + '/' + id)
@@ -41,6 +58,28 @@
           .fail(function (jqXHR, textStatus, err) {
               $('#foundTask').text('Error: ' + err);
           });
+    }
+
+    function post() {
+        var name = $('#taskName').val();
+        var description = $('#taskDescription').val();
+
+        $.ajax({
+            type: "POST",
+            url: uri,
+            // The key needs to match your method's input parameter (case-sensitive).
+            data: JSON.stringify({ Name: name, Description : description }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function(data) {
+                $('#postTask').text('OK: ' + data);
+                loadTasks();
+            },
+            failure: function (err) {
+                $('#postTask').text('Error: ' + err);
+            }
+        });
+
     }
     </script>
 </body>

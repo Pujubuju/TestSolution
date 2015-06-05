@@ -17,11 +17,13 @@ namespace DashboardApp.WebApi.Controllers
             _tasksService = tasksService;
         }
 
+        [HttpGet]
         public IEnumerable<Task> GetAllTasks()
         {
             return _tasksService.Tasks;
         }
 
+        [HttpGet]
         public IHttpActionResult GetTask(Guid id)
         {
             Task task = _tasksService.Tasks.FirstOrDefault((p) => p.Id == id);
@@ -29,6 +31,17 @@ namespace DashboardApp.WebApi.Controllers
             {
                 return NotFound();
             }
+            return Ok(task);
+        }
+
+        [HttpPost]
+        public IHttpActionResult PostTask(Task task)
+        {           
+            if (task == null)
+            {
+                return NotFound();
+            }
+            _tasksService.Add(task);
             return Ok(task);
         }
 

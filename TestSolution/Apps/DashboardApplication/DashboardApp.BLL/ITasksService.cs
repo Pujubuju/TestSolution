@@ -6,5 +6,6 @@ namespace DashboardApp.BLL
     public interface ITasksService
     {
         IEnumerable<Task> Tasks { get; }
+        void Add(Task task);
     }
 }
