@@ -1,14 +1,13 @@
-﻿using System.Web.Mvc;
+using App.DashboardApp.Routing;
 using System.Web.Routing;
 
-namespace DashboardApp
+namespace App.DashboardApp
 {
-    public static class RouteConfig
+    public class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            routes.MapRoute("Default", "{controller}/{action}/{id}", new { controller = "Welcome", action = "Index", id = UrlParameter.Optional });
+            routes.Add("Default", new DefaultRoute());
         }
     }
 }

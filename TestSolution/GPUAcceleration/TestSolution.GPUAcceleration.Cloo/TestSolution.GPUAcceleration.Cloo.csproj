@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Cloo">
-      <HintPath>..\packages\Sourceforge.Cloo.0.9.1\lib\net35\Cloo.dll</HintPath>
+      <HintPath>..\..\packages\Sourceforge.Cloo.0.9.1\lib\net35\Cloo.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,9 +53,6 @@
     <Compile Include="Math\ArrayMultiplicator.cs" />
     <Compile Include="Math\BaseGPUMathUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Common\TestSolution.Common\TestSolution.Common.csproj">

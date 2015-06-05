@@ -1,15 +1,15 @@
-﻿using System.Web;
-using System.Web.Mvc;
+using System.Web;
+using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace DashboardApp
+namespace App.DashboardApp
 {
-    public class MvcApplication : HttpApplication
+    public class Application : HttpApplication
     {
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
 }

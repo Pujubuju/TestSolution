@@ -1,4 +1,12 @@
-ï»¿using System.Reflection;
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="AssemblyInfo.cs" company="">
+//   Copyright © 2015 
+// </copyright>
+// --------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Reflection;
+using System.Resources;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
@@ -9,9 +17,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("DashboardApp")]
-[assembly: AssemblyCopyright("Copyright Â©  2015")]
+[assembly: AssemblyCopyright("Copyright © 2015 ")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: NeutralResourcesLanguage("en-US")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -19,7 +28,9 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d6ba3bed-e390-40f7-97d9-9fedcccd686b")]
+[assembly: Guid("4e77ac8d-6669-4526-8d3c-9e450bfeb41b")]
+
+[assembly: CLSCompliant(true)]
 
 // Version information for an assembly consists of the following four values:
 //
