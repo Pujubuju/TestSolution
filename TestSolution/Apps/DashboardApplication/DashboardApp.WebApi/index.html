@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Product App</title>
+</head>
+<body>
+
+    <div>
+        <h2>All Tasks</h2>
+        <ul id="tasks" />
+    </div>
+    <div>
+        <h2>Search by ID</h2>
+        <input type="text" id="prodId" size="5" />
+        <input type="button" value="Search" onclick="find();" />
+        <p id="foundTask" />
+    </div>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+    var uri = 'api/tasks';
+    $(document).ready(function () {
+      $.getJSON(uri)
+          .done(function (data) {
+            $.each(data, function (key, item) {
+                $('<li>', { text: formatItem(item) }).appendTo($('#tasks'));
+            });
+          });
+    });
+
+    function formatItem(item) {
+        return item.Name + ', ' + item.Description + ', ' + item.Id;
+    }
+
+    function find() {
+      var id = $('#prodId').val();
+      $.getJSON(uri + '/' + id)
+          .done(function (data) {
+              $('#foundTask').text(formatItem(data));
+          })
+          .fail(function (jqXHR, textStatus, err) {
+              $('#foundTask').text('Error: ' + err);
+          });
+    }
+    </script>
+</body>
+</html>

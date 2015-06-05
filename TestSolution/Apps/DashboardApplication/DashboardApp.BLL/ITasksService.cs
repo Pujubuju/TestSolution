@@ -1,9 +1,10 @@
-﻿using DashboardApp.Common.Models;
+﻿using System.Collections.Generic;
+using DashboardApp.Common.Models;
 
 namespace DashboardApp.BLL
 {
     public interface ITasksService
     {
-        TaskCollection Tasks { get; }
+        IEnumerable<Task> Tasks { get; }
     }
 }

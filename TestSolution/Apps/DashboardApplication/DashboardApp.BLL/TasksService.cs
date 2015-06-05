@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using DashboardApp.Common.Models;
-using Task = DashboardApp.Common.Models.Task;
 
 namespace DashboardApp.BLL
 {
     public class TasksService : ITasksService
     {
-        public TaskCollection Tasks { get; private set; }
+        public IEnumerable<Task> Tasks { get; private set; }
 
         public TasksService()
         {
-            Tasks = new TaskCollection
-            {
                 Tasks = new List<Task>
                 {
                     new Task
@@ -35,9 +32,8 @@ namespace DashboardApp.BLL
                         Name = "Supcom", 
                         Description = "just fun :)", 
                         EstimatedTime = TimeSpan.FromHours(2)
-                    },
-                }
-            };
+                    },            
+                };
         }
     }
 }
