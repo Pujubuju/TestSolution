@@ -75,6 +75,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\Components\Home\Home.html" />
+    <Content Include="App\Components\Home\homeController.js" />
+    <Content Include="App\Components\Login\Login.html" />
+    <Content Include="App\Components\Login\loginController.js" />
+    <Content Include="App\Components\Page1\page1Controller.js" />
+    <Content Include="App\Components\Page2\page2Controller.js" />
+    <Content Include="App\Components\Register\Register.html" />
+    <Content Include="App\Components\Register\registerController.js" />
+    <Content Include="mainApp.js" />
+    <Content Include="App\Components\Page1\Page1.html" />
+    <Content Include="App\Components\Page2\Page2.html" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="Web.config" />
