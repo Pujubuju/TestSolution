@@ -7,7 +7,7 @@ using DashboardApp.Common.Models;
 
 namespace DashboardApp.WebApi.Controllers
 {
-    public class UsersController : ApiController
+    public class RegistrationController : ApiController
     {
          #region Fields and Properties
 
@@ -17,7 +17,7 @@ namespace DashboardApp.WebApi.Controllers
 
         #region Constructor
 
-        public UsersController(IUsersService usersService)
+        public RegistrationController(IUsersService usersService)
         {
             _usersService = usersService;
         }

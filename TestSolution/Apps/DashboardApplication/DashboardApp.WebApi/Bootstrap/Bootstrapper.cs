@@ -19,5 +19,6 @@ namespace DashboardApp.WebApi.Bootstrap
             container.RegisterType<ITasksService, TasksService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IUsersService, UsersService>(new ContainerControlledLifetimeManager());
         }
+
     }
 }

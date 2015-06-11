@@ -97,7 +97,7 @@
     <Compile Include="Bootstrap\Bootstrapper.cs" />
     <Compile Include="Bootstrap\UnityResolver.cs" />
     <Compile Include="Controllers\TasksController.cs" />
-    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

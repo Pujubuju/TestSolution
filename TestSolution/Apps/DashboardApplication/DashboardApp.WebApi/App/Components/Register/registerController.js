@@ -4,7 +4,7 @@
     $scope.registrationConclusion = "Type infos...";
     $scope.users = [];
 
-    var uri = 'api/users';
+    var uri = 'api/registration';
 
     $scope.sendRegistration = function() {
         var password = this.password;
@@ -13,18 +13,26 @@
         $.ajax({
             type: "POST",
             url: uri,
-            data: JSON.stringify({ Email: email, Password: password }),
+            data: getRegistrationData(email, password),
             contentType: "application/json; charset=utf-8",
             dataType: "json",
-            success: function (data) {
-                $scope.registrationConclusion = "Registration success! " + data;
-                loadUsers();
-            },
-            failure: function (err) {
-                $scope.registrationConclusion = 'Error: ' + err;
-            }
+            success: onRegisterSuccess,
+            failure: onRegisterFailure
         });
     };
+
+    function getRegistrationData(email, password) {
+        return JSON.stringify({ Email: email, Password: password });
+    }
+
+    function onRegisterSuccess (data) {
+        $scope.registrationConclusion = "Registration success! " + data;
+        loadUsers();
+    };
+
+    function onRegisterFailure (err) {
+        $scope.registrationConclusion = 'Error: ' + err;
+    }
 
     function loadUsers() {
         $scope.users = [];

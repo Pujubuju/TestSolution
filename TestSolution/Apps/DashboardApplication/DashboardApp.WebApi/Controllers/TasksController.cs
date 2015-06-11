@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
-using DashboardApp.BLL;
 using DashboardApp.BLL.Services;
 using DashboardApp.Common.Models;
 
