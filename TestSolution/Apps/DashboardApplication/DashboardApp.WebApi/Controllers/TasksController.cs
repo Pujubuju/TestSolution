@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using DashboardApp.BLL;
+using DashboardApp.BLL.Services;
 using DashboardApp.Common.Models;
 
 namespace DashboardApp.WebApi.Controllers
@@ -10,12 +11,22 @@ namespace DashboardApp.WebApi.Controllers
     public class TasksController : ApiController
     {
 
+        #region Fields and Properties
+
         private readonly ITasksService _tasksService;
+
+        #endregion Fields and Properties
+
+        #region Constructor
 
         public TasksController(ITasksService tasksService)
         {
             _tasksService = tasksService;
         }
+
+        #endregion Constructor
+
+        #region Methods
 
         [HttpGet]
         public IEnumerable<Task> GetAllTasks()
@@ -36,7 +47,7 @@ namespace DashboardApp.WebApi.Controllers
 
         [HttpPost]
         public IHttpActionResult PostTask(Task task)
-        {           
+        {
             if (task == null)
             {
                 return NotFound();
@@ -62,5 +73,9 @@ namespace DashboardApp.WebApi.Controllers
             _tasksService.Delete(id);
             return Ok(id);
         }
+
+        #endregion Methods
+
+
     }
 }

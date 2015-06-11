@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using DashboardApp.Common.Models;
 
-namespace DashboardApp.BLL
+namespace DashboardApp.BLL.Services
 {
     public class TasksService : ITasksService
     {

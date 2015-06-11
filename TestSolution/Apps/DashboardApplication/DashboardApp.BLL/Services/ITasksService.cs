@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using DashboardApp.Common.Models;
 
-namespace DashboardApp.BLL
+namespace DashboardApp.BLL.Services
 {
     public interface ITasksService
     {

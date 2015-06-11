@@ -1,4 +1,32 @@
 ﻿<div class="jumbotron text-center">
     <h1>Register</h1>
     <p>{{ message }}</p>
+    
+    <form role="form">
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email" ng-model="email">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" ng-model="password">
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="sendRegistration()">Submit</button>
+        <p>{{ registrationConclusion }}</p>
+    </form>
+    
+    <table>
+        <tr ng-repeat="x in users">
+            <td>{{ x.Email }}</td>
+            <td>{{ x.Password }}</td>
+            <td>{{ x.Id }}</td>
+        </tr>
+    </table>
+    
+
 </div>
+
+
+<script>
+    
+</script>

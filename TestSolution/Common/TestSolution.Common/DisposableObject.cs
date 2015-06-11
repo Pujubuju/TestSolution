@@ -15,8 +15,10 @@ namespace TestSolution.Common
 
         protected virtual void Dispose(bool disposing)
         {
-            if (!disposing) return;
-            if (_disposed) return;
+            if (!disposing || _disposed)
+            {
+                return;
+            }
             _disposed = true;
         }
 

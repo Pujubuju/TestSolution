@@ -28,6 +28,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -75,17 +77,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App\Components\Home\Home.html" />
+    <Content Include="App\Components\Home\home.html" />
     <Content Include="App\Components\Home\homeController.js" />
-    <Content Include="App\Components\Login\Login.html" />
+    <Content Include="App\Components\Login\login.html" />
     <Content Include="App\Components\Login\loginController.js" />
     <Content Include="App\Components\Page1\page1Controller.js" />
     <Content Include="App\Components\Page2\page2Controller.js" />
-    <Content Include="App\Components\Register\Register.html" />
+    <Content Include="App\Components\Register\register.html" />
     <Content Include="App\Components\Register\registerController.js" />
     <Content Include="mainApp.js" />
-    <Content Include="App\Components\Page1\Page1.html" />
-    <Content Include="App\Components\Page2\Page2.html" />
+    <Content Include="App\Components\Page1\page1.html" />
+    <Content Include="App\Components\Page2\page2.html" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="Web.config" />
@@ -95,6 +97,7 @@
     <Compile Include="Bootstrap\Bootstrapper.cs" />
     <Compile Include="Bootstrap\UnityResolver.cs" />
     <Compile Include="Controllers\TasksController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -111,6 +114,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\TestSolution.Common\TestSolution.Common.csproj">
+      <Project>{2ef48778-c3cd-4748-8ef5-9a6df25d0ec9}</Project>
+      <Name>TestSolution.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DashboardApp.BLL\DashboardApp.BLL.csproj">
       <Project>{65a84802-048d-4cb6-87a5-63cd3ef4b4b3}</Project>
       <Name>DashboardApp.BLL</Name>
