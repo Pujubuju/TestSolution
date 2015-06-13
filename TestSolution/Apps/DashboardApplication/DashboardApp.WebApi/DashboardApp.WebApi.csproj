@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
     <RunCodeAnalysis>true</RunCodeAnalysis>
     <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <CodeAnalysisRuleSet>..\..\..\CodeAnalysis\MyCustomRules\ManagedCodeRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -45,6 +46,10 @@
       <HintPath>..\..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -54,6 +59,10 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -65,12 +74,6 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http.Formatting">
-      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http">
-      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Http.WebHost">
       <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
@@ -94,10 +97,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Bootstrap\Bootstrapper.cs" />
-    <Compile Include="Bootstrap\UnityResolver.cs" />
-    <Compile Include="Controllers\TasksController.cs" />
-    <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -125,6 +124,10 @@
     <ProjectReference Include="..\DashboardApp.Common\DashboardApp.Common.csproj">
       <Project>{c83065d8-9c84-447a-9b01-40e6740e0513}</Project>
       <Name>DashboardApp.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DashboardApp.Controllers\DashboardApp.Controllers.csproj">
+      <Project>{5aa382dc-bec7-4a85-a7a7-a00b9fd05b51}</Project>
+      <Name>DashboardApp.Controllers</Name>
     </ProjectReference>
     <ProjectReference Include="..\DashboardApp.DAL\DashboardApp.DAL.csproj">
       <Project>{dec23099-2c36-46e3-9c04-f16001a2e1e6}</Project>

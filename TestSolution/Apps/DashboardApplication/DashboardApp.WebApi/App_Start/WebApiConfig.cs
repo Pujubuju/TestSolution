@@ -1,5 +1,7 @@
 ﻿using System.Web.Http;
-using DashboardApp.WebApi.Bootstrap;
+using System.Web.Http.Dispatcher;
+using DashboardApp.Controllers.Bootstrap;
+using DashboardApp.Controllers.Others;
 
 namespace DashboardApp.WebApi
 {
@@ -13,7 +15,8 @@ namespace DashboardApp.WebApi
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-            config.DependencyResolver = Bootstrapper.CreateResolver();
+            config.Services.Replace(typeof(IAssembliesResolver), new MyAssembliesResolver());
+            config.DependencyResolver = Bootstrapper.CreateResolver();            
         }
     }
 }

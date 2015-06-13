@@ -4,7 +4,7 @@ using System.Web.Http.Dependencies;
 using Microsoft.Practices.Unity;
 using TestSolution.Common;
 
-namespace DashboardApp.WebApi.Bootstrap
+namespace DashboardApp.Controllers.Bootstrap
 {
     public class UnityResolver : DisposableObject, IDependencyResolver
     {

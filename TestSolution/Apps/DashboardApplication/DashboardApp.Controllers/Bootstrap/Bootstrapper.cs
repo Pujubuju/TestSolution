@@ -2,7 +2,7 @@
 using DashboardApp.BLL.Services;
 using Microsoft.Practices.Unity;
 
-namespace DashboardApp.WebApi.Bootstrap
+namespace DashboardApp.Controllers.Bootstrap
 {
     public static class Bootstrapper
     {

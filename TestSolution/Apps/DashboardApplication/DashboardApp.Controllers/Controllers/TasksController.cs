@@ -5,7 +5,7 @@ using System.Web.Http;
 using DashboardApp.BLL.Services;
 using DashboardApp.Common.Models;
 
-namespace DashboardApp.WebApi.Controllers
+namespace DashboardApp.Controllers.Controllers
 {
     public class TasksController : ApiController
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
 
-namespace DashboardApp.OwinSelfHost
+namespace DashboardApp.Controllers.Controllers
 {
     public class ValuesController : ApiController
     {

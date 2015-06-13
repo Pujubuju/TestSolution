@@ -9,19 +9,15 @@ namespace DashboardApp.OwinSelfHost
         static void Main()
         {
             const string baseAddress = "http://localhost:9000/";
-
-            // Start OWIN host 
             using (WebApp.Start<Startup>(baseAddress))
             {
-                // Create HttpCient and make a request to api/values 
                 var client = new HttpClient();
 
                 PrintResponse(client, baseAddress, "api/values");
                 PrintResponse(client, baseAddress, "api/values/5");
+                PrintResponse(client, baseAddress, "api/tasks");
                 Console.ReadLine();
-            }
-
-            
+            }           
         }
 
         private static void PrintResponse(HttpClient client, string baseAddress, string uri)
@@ -30,5 +26,6 @@ namespace DashboardApp.OwinSelfHost
             Console.WriteLine(response);
             Console.WriteLine(response.Content.ReadAsStringAsync().Result);
         }
+
     }
 }
