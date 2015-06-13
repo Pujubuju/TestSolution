@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Net.Http;
 using Microsoft.Owin.Hosting;
 
 namespace DashboardApp.OwinSelfHost
@@ -11,20 +10,10 @@ namespace DashboardApp.OwinSelfHost
             const string baseAddress = "http://localhost:9000/";
             using (WebApp.Start<Startup>(baseAddress))
             {
-                var client = new HttpClient();
-
-                PrintResponse(client, baseAddress, "api/values");
-                PrintResponse(client, baseAddress, "api/values/5");
-                PrintResponse(client, baseAddress, "api/tasks");
+                Console.WriteLine("Server successfully started at" + baseAddress);
+                Console.WriteLine("Press key to shut down...");
                 Console.ReadLine();
             }           
-        }
-
-        private static void PrintResponse(HttpClient client, string baseAddress, string uri)
-        {
-            var response = client.GetAsync(baseAddress + uri).Result;
-            Console.WriteLine(response);
-            Console.WriteLine(response.Content.ReadAsStringAsync().Result);
         }
 
     }
