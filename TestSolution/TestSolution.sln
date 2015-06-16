@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DashboardApp.Controllers", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaashboardApp.WebApiSelfHost", "Apps\DashboardApplication\DaashboardApp.WebApiSelfHost\DaashboardApp.WebApiSelfHost.csproj", "{DA73458D-2133-4A8E-899A-D3F090268068}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkScanner", "Apps\NetworkScanner\NetworkScanner.csproj", "{96DDF5C0-588E-4944-824C-FB7CB1CC3319}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -181,6 +183,12 @@ Global
 		{DA73458D-2133-4A8E-899A-D3F090268068}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA73458D-2133-4A8E-899A-D3F090268068}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DA73458D-2133-4A8E-899A-D3F090268068}.Release|x86.ActiveCfg = Release|Any CPU
+		{96DDF5C0-588E-4944-824C-FB7CB1CC3319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96DDF5C0-588E-4944-824C-FB7CB1CC3319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96DDF5C0-588E-4944-824C-FB7CB1CC3319}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{96DDF5C0-588E-4944-824C-FB7CB1CC3319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96DDF5C0-588E-4944-824C-FB7CB1CC3319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96DDF5C0-588E-4944-824C-FB7CB1CC3319}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -206,5 +214,6 @@ Global
 		{F5E97EEB-D1EE-4C27-842B-08F689593468} = {86B2CA13-C98A-4289-A4F4-822294380EB8}
 		{5AA382DC-BEC7-4A85-A7A7-A00B9FD05B51} = {86B2CA13-C98A-4289-A4F4-822294380EB8}
 		{DA73458D-2133-4A8E-899A-D3F090268068} = {86B2CA13-C98A-4289-A4F4-822294380EB8}
+		{96DDF5C0-588E-4944-824C-FB7CB1CC3319} = {0B3609EE-7558-44AE-9D0B-92590076D185}
 	EndGlobalSection
 EndGlobal
