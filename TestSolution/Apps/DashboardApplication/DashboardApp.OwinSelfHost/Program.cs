@@ -30,6 +30,7 @@ namespace DashboardApp.OwinSelfHost
         {
             const int port = 9000;
             var options = new StartOptions();
+            options.Port = port;
             options.Urls.Add(GetUrl("localhost", port));
             options.Urls.Add(GetUrl("127.0.0.1", port));
             options.Urls.Add(GetUrl(Environment.MachineName, port));
