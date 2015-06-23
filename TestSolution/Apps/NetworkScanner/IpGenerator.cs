@@ -14,6 +14,12 @@ namespace NetworkScanner
             
         }
 
+        /// <summary>
+        /// Generates IPv4 adressess from given range.
+        /// </summary>
+        /// <param name="start">Start adress. (194.168.0.1)</param>
+        /// <param name="end">End adress. (194.168.0.1)</param>
+        /// <returns></returns>
         public List<string> GetAddressesFromRange(string start,  string end)
         {
             string[] startAddress = start.Split(new[] {'.'});
@@ -37,7 +43,7 @@ namespace NetworkScanner
                 {
                     for (int k = start3; k <= end3; k++)
                     {
-                        for (int l = start4; l < end4; l++)
+                        for (int l = start4; l <= end4; l++)
                         {
                             builder.Clear();
                             builder
@@ -53,30 +59,5 @@ namespace NetworkScanner
             return adressess;
         }
 
-        public List<string> GetAllAddressess()
-        {
-            var adressess = new List<string>(1000);
-            var builder = new StringBuilder(12);
-            for (int i = 0; i < MAX_ADDRESS; i++)
-            {
-                for (int j = 0; j < MAX_ADDRESS; j++)
-                {
-                    for (int k = 0; k < MAX_ADDRESS; k++)
-                    {
-                        for (int l = 0; l < MAX_ADDRESS; l++)
-                        {
-                            builder.Clear();
-                            builder
-                                .Append(i).Append(DOT)
-                                .Append(j).Append(DOT)
-                                .Append(k).Append(DOT)
-                                .Append(l);
-                            adressess.Add(builder.ToString());
-                        }
-                    }
-                }
-            }
-            return adressess;
-        }
     }
 }

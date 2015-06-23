@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Net;
 using System.Net.NetworkInformation;
-using System.Net.Sockets;
-using System.Text;
 using System.Threading;
 
 namespace NetworkScanner
@@ -13,28 +9,18 @@ namespace NetworkScanner
     {
         private static void Main()
         {
-
-            var addr = "87.206.229.249";
-            var ping = Ping(addr, 3, 5);
-            WriteResult(addr, ping);
-            Console.ReadKey();
-
-            var ipAddress = IPAddress.Parse(addr);
-            var endPoint = new IPEndPoint(ipAddress, 9000);
-            var client = new TcpClient(endPoint);
-            //client.Connect();
-
             var generator = new IpGenerator();
-            List<string> addressess = generator.GetAddressesFromRange("192.168.0.1", "192.168.0.256");
+            List<string> addressess = generator.GetAddressesFromRange("192.168.0.1", "192.168.0.15");
             foreach (string address in addressess)
             {
-                PingReply result = Ping(address, 3, 5);
+                PingReply result = Ping(address, 2, 2);
                 if (result != null)
                 {
                     WriteResult(address, result);
                 }
-                Thread.Sleep(TimeSpan.FromSeconds(1));
+                Thread.Sleep(TimeSpan.FromSeconds(0.1));
             }
+
             Console.ReadKey();
         }
 
@@ -54,14 +40,10 @@ namespace NetworkScanner
                 }
                 catch
                 {
-                    // Do nothing and let it try again until the attempts are exausted.
-                    // Exceptions are thrown for normal ping failurs like address lookup
-                    // failed.  For this reason we are supressing errors.
                 }
             }
-
-            // Return false if we can't successfully ping the server after several attempts.
             return null;
         }
+
     }
 }
