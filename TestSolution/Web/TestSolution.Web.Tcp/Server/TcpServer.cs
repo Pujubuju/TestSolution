@@ -2,11 +2,14 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using TestSolution.Web.Tcp.Server.Models;
 
-namespace TestSolution.Web.Tcp
+namespace TestSolution.Web.Tcp.Server
 {
-    public class TcpServer
+    public class TcpServer : ITcpServer
     {
+
+        #region Fields and Properties
 
         private const int DEFAULT_BUFFER_SIZE = 1024;
         private readonly TcpListener _tcpListener;
@@ -14,14 +17,37 @@ namespace TestSolution.Web.Tcp
         private TcpClient _client;
         private bool _isRunning;
 
+        #endregion Fields and Properties
+
+        #region Constructor
+
         public TcpServer(IPAddress address, int port)
         {
             _tcpListener = new TcpListener(address, port);
         }
 
+        #endregion Constructor
+
+        #region Methods
+
+        private void InvokeDataRecivedEvent(TcpData data)
+        {
+            var handler = DataRecivedEvent;
+            if (handler != null)
+            {
+                handler(this, data);
+            }
+        }
+
+        #endregion Methods
+
+        #region ITcpServer
+
+        public event EventHandler<TcpData> DataRecivedEvent;
+
         public void Start()
         {
-            Console.WriteLine("Server started...");
+            //Console.WriteLine("Server started...");
             _isRunning = true;
             try
             {
@@ -31,8 +57,12 @@ namespace TestSolution.Web.Tcp
                 {
                     NetworkStream stream = _client.GetStream();
                     int i = stream.Read(_buffer, 0, _buffer.Length);
-                    string data = Encoding.ASCII.GetString(_buffer, 0, i);
-                    Console.WriteLine("Received: {0}", data);
+                    //string data = Encoding.ASCII.GetString(_buffer, 0, i);
+                    //Console.WriteLine("Received: {0}", data);
+                    if (i != 0)
+                    {
+                        InvokeDataRecivedEvent(new TcpData {Bytes = _buffer, Count = i});
+                    }
                 }
             }
             catch (SocketException e)
@@ -50,5 +80,8 @@ namespace TestSolution.Web.Tcp
                 _client.Close();
             }
         }
+
+        #endregion ITcpServer
+
     }
 }

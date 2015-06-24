@@ -1,18 +1,28 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace NetworkScanner
+namespace TestSolution.Web.Tcp.Utils
 {
-    public class IpGenerator
+    public class IpGenerator : IIpGenerator
     {
 
-        private const int MAX_ADDRESS = 256;
-        private const string DOT = ".";
+        #region Fields and Properties
+
+        private const char DOT = '.';
+        private readonly char[] _addressSeparators = {DOT};
+
+        #endregion Fields and Properties
+
+        #region Constructor
 
         public IpGenerator()
         {
-            
+
         }
+
+        #endregion Constructor
+
+        #region IIpGenerator
 
         /// <summary>
         /// Generates IPv4 adressess from given range.
@@ -20,10 +30,10 @@ namespace NetworkScanner
         /// <param name="start">Start adress. (194.168.0.1)</param>
         /// <param name="end">End adress. (194.168.0.1)</param>
         /// <returns></returns>
-        public List<string> GetAddressesFromRange(string start,  string end)
+        public List<string> GetAddressesFromRange(string start, string end)
         {
-            string[] startAddress = start.Split(new[] {'.'});
-            string[] endAddress = end.Split(new[] { '.' });
+            string[] startAddress = start.Split(_addressSeparators);
+            string[] endAddress = end.Split(_addressSeparators);
 
             int start1 = int.Parse(startAddress[0]);
             int start2 = int.Parse(startAddress[1]);
@@ -58,6 +68,8 @@ namespace NetworkScanner
             }
             return adressess;
         }
+
+        #endregion IIpGenerator
 
     }
 }

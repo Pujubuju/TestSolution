@@ -3,7 +3,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
-namespace TestSolution.Web.Tcp
+namespace TestSolution.Web.Tcp.Client
 {
     public class TcpSender
     {
