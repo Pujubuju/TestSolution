@@ -53,7 +53,7 @@ namespace TestSolution.Common
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             var result = new string(
-                Enumerable.Repeat(chars, 8)
+                Enumerable.Repeat(chars, length)
                     .Select(s => s[Next(s.Length)])
                     .ToArray());
             return result;

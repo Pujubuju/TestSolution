@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
 using TestSolution.Web.Tcp.Server.Models;
 
 namespace TestSolution.Web.Tcp.Server
@@ -47,7 +46,6 @@ namespace TestSolution.Web.Tcp.Server
 
         public void Start()
         {
-            //Console.WriteLine("Server started...");
             _isRunning = true;
             try
             {
@@ -57,8 +55,6 @@ namespace TestSolution.Web.Tcp.Server
                 {
                     NetworkStream stream = _client.GetStream();
                     int i = stream.Read(_buffer, 0, _buffer.Length);
-                    //string data = Encoding.ASCII.GetString(_buffer, 0, i);
-                    //Console.WriteLine("Received: {0}", data);
                     if (i != 0)
                     {
                         InvokeDataRecivedEvent(new TcpData {Bytes = _buffer, Count = i});

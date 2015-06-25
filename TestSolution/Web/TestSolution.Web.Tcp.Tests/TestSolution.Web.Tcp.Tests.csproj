@@ -50,6 +50,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\TestSolution.Common\TestSolution.Common.csproj">
+      <Project>{2ef48778-c3cd-4748-8ef5-9a6df25d0ec9}</Project>
+      <Name>TestSolution.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Tests\TestSolution.Tests.Common\TestSolution.Tests.Common.csproj">
       <Project>{a240a8a5-6c02-4e34-962e-f3e1a99f65ac}</Project>
       <Name>TestSolution.Tests.Common</Name>

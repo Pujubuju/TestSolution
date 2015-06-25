@@ -5,10 +5,20 @@ using System.Text;
 
 namespace TestSolution.Web.Tcp.Client
 {
-    public class TcpSender
+    /// <summary>
+    /// Sends messages using TCP connection.
+    /// </summary>
+    public class TcpSender : ITcpSender
     {
+
+        #region Fields and Properties
+
         private readonly TcpClient _tcpClient;
         private NetworkStream _connectionStream;
+
+        #endregion Fields and Properties
+
+        #region Constructor
 
         public TcpSender(IPAddress address, int port)
         {
@@ -16,17 +26,32 @@ namespace TestSolution.Web.Tcp.Client
             _tcpClient = new TcpClient(endPoint);
         }
 
+        #endregion Constructor
+
+        #region ITcpSender
+
+        /// <summary>
+        /// Establish TCP connection.
+        /// </summary>
+        /// <param name="serverEndPoint"></param>
         public void Connect(IPEndPoint serverEndPoint)
         {
             _tcpClient.Connect(serverEndPoint);
             _connectionStream = _tcpClient.GetStream();
         }
 
+        /// <summary>
+        /// Closes TCP connection.
+        /// </summary>
         public void Close()
         {
             _tcpClient.Close();
         }
 
+        /// <summary>
+        /// Sends message via TCP connection.
+        /// </summary>
+        /// <param name="message"></param>
         public void Send(string message)
         {
             try
@@ -45,5 +70,6 @@ namespace TestSolution.Web.Tcp.Client
             }
         }
 
+        #endregion ITcpSender
     }
 }
