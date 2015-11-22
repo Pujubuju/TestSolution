@@ -6,15 +6,12 @@ app.get('/', function (req, res) {
 })
 
 var server = app.listen(8081, function () {
-
   var host = server.address().address
   var port = server.address().port
-
   console.log("Example app listening at http://%s:%s", host, port)
-
 })
-
 
 var connect = require('connect');
 var serveStatic = require('serve-static');
 connect().use(serveStatic(__dirname)).listen(8080);
+console.log("Static files server listening at http://%s:%s", "localhost", 8080)

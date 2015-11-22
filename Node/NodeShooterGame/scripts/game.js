@@ -1,5 +1,5 @@
 
-define(['soundsService', 'imagesService'], function (soundsService, imagesService) {
+define(['soundsService', 'imagesService'], function game(soundsService, imagesService) {
 
 	var game = {
 
@@ -38,6 +38,13 @@ define(['soundsService', 'imagesService'], function (soundsService, imagesServic
 			});
 		},
 
+		showCoords : function(event){
+			var x = event.clientX;
+			var y = event.clientY;
+			player.x = x;
+			player.y = y;	
+		},
+
 		player: {},
 
 		init: function () {
@@ -71,12 +78,6 @@ define(['soundsService', 'imagesService'], function (soundsService, imagesServic
 
 
 	};
-
-
-
-
-
-
 
 	return game;
 });
