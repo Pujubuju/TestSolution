@@ -1,32 +1,30 @@
 function ImagesService() {	
 	var _self = this;
-	this.images = new Array(),
-	this.loadQueue = new createjs.LoadQueue();
+	_self.images = new Array(),
+	_self.loadQueue = new createjs.LoadQueue();
 
-	this.loadImages = function () {
-		this.loadQueue.addEventListener("fileload", this.handleFileComplete);
-		this.loadQueue.loadFile("nuke.png");
-		this.loadQueue.loadFile("ship1.png");
+	_self.loadImages = function () {
+		_self.loadQueue.addEventListener("fileload", _self.handleFileComplete);
+		_self.loadQueue.loadFile("nuke.png");
+		_self.loadQueue.loadFile("ship1.png");
 	}
 
-	this.handleFileComplete = function (event) {
-		// document.body.appendChild(event.result);
+	_self.handleFileComplete = function (event) {
 		var item = new Object();
 		item.name = event.item.src;
 		item.img = event.result;
 		_self.images.push(item);
 	}
 
-	this.getImage = function (name){
-		for (var index = 0; index < this.images.length; index++) {
-			var item = this.images[index];
+	_self.getImage = function (name){
+		for (var index = 0; index < _self.images.length; index++) {
+			var item = _self.images[index];
 			if(item.name == name){
 				return item.img;
 			}
 		}
 		return null;
 	}
-
 }
 
 define([],

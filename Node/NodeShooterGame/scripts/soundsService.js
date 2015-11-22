@@ -1,12 +1,17 @@
-define([], function () {
-	var service = {
-		soundID: "Thunder",
-		loadSound: function () {
-			createjs.Sound.registerSound("pagneLingua.mp3", this.soundID);
-		},
-		playSound: function () {
-			createjs.Sound.play(this.soundID);
-		},
+function SoundsService() {
+	var _self = this;
+	_self.soundID = "Thunder",
+	
+	_self.loadSound = function () {
+		createjs.Sound.registerSound("pagneLingua.mp3", _self.soundID);
 	}
-	return service;
-});
+	
+	_self.playSound = function () {
+		createjs.Sound.play(_self.soundID);
+	}
+}
+
+define([],
+	function () {
+		return new SoundsService();
+	});
