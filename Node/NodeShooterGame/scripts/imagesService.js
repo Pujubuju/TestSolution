@@ -1,14 +1,35 @@
-define([], function () {
-	var service = {
-		loadImage: function () {
-			var preload = new createjs.LoadQueue();
-			preload.addEventListener("fileload", this.handleFileComplete);
-			preload.loadFile("nuke.png");
-		},
+function ImagesService() {	
+	var _self = this;
+	this.images = new Array(),
+	this.loadQueue = new createjs.LoadQueue();
 
-		handleFileComplete: function (event) {
-			document.body.appendChild(event.result);
-		},
+	this.loadImages = function () {
+		this.loadQueue.addEventListener("fileload", this.handleFileComplete);
+		this.loadQueue.loadFile("nuke.png");
+		this.loadQueue.loadFile("ship1.png");
 	}
-	return service;
-});
+
+	this.handleFileComplete = function (event) {
+		// document.body.appendChild(event.result);
+		var item = new Object();
+		item.name = event.item.src;
+		item.img = event.result;
+		_self.images.push(item);
+	}
+
+	this.getImage = function (name){
+		for (var index = 0; index < this.images.length; index++) {
+			var item = this.images[index];
+			if(item.name == name){
+				return item.img;
+			}
+		}
+		return null;
+	}
+
+}
+
+define([],
+	function () {
+		return new ImagesService();
+	});
