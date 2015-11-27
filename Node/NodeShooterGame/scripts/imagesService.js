@@ -6,12 +6,13 @@ function ImagesService() {
 	_self.loadImages = function () {
 		_self.loadQueue.addEventListener("fileload", _self.handleFileComplete);
 		_self.loadQueue.loadFile("nuke.png");
-		_self.loadQueue.loadFile("ship1.png");
+		_self.loadQueue.loadFile("resources/ship1.png");
 	}
 
 	_self.handleFileComplete = function (event) {
 		var item = new Object();
-		item.name = event.item.src;
+		var itemSplitted = event.item.src.split("/");
+		item.name = itemSplitted[itemSplitted.length-1];
 		item.img = event.result;
 		_self.images.push(item);
 	}
