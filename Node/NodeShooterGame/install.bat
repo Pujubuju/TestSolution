@@ -14,3 +14,6 @@ call npm install multer --save;
 
 echo installing static files server
 call npm install connect serve-static
+
+echo installing karma testing framework
+call npm install -g karma
