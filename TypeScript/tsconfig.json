@@ -5,11 +5,13 @@
         "removeComments": true,
         "preserveConstEnums": true,
         "declaration": true,
-        "out": "tsoutput.js",
         "sourceMap": true,
-        "watch": true    
+        "watch": false,
+        "isolatedModules": false
     },
     "files": [
-        "typescript/Knight.ts"
+        "typescript/Unit.ts",
+        "typescript/Knight.ts",
+        "typescript/UnitsModule.ts"
     ]
 }

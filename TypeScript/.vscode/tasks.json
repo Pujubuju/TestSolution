@@ -8,7 +8,17 @@
     "tasks": [
         {
             "taskName": "Build solution",
-            "isWatching": true,
+            "isWatching": false,
+            "isBuildCommand": false
+        },
+        {
+            "taskName": "Run tests",
+            "isWatching": false,
+            "isTestCommand": true
+        },
+        {
+            "taskName": "Build solution and run tests",
+            "isWatching": false,
             "isBuildCommand": true
         }
     ]

@@ -1,20 +1,33 @@
-/* File: gulpfile.js */
+"use strict";
 
-// grab our gulp packages
 var gulp = require('gulp');
 var gutil = require('gulp-util');
-
-// typescript compilation
+var jasmine = require('gulp-jasmine');
 var ts = require('gulp-typescript');
 var tsProject = ts.createProject('tsconfig.json');
+var runSequence = require('run-sequence');
+var gulpSequence = require('gulp-sequence');
 
-// create a default task and just log a message
 gulp.task('default', function () {
   return gutil.log('Gulp is running!');
 });
 
-// build task
+gulp.task('build', function(callback) {
+  runSequence('build-clean',
+              ['build-scripts', 'build-styles'],
+              'build-html',
+              callback);
+});
+
+gulp.task('Build solution and run tests', 
+gulpSequence('Build solution', 'Run tests'));
+
 gulp.task('Build solution', function () {
   var tsResult = tsProject.src().pipe(ts(tsProject));
-  return tsResult.js.pipe(gulp.dest('built'));
+  return tsResult.js.pipe(gulp.dest('build'));
+});
+
+gulp.task('Run tests', function () {
+    return gulp.src(['tests/*.js', 'tests/typescript/*.js'])
+        .pipe(jasmine());
 });
