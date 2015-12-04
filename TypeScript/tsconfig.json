@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "declaration": true,
+        "out": "tsoutput.js",
+        "sourceMap": true,
+        "watch": true    
+    },
+    "files": [
+        "typescript/Knight.ts"
+    ]
+}
