@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "declaration": true,
+        "sourceMap": true,
+        "watch": true,
+        "isolatedModules": false
+    },
+    "files": [
+        "typescript/Knight.ts",
+        "typescript/UnitsModule.ts",
+        "typescript/ObjectViewModel.ts"
+    ]
+}

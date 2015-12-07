@@ -16,5 +16,6 @@ var serveStatic = require('serve-static');
 connect()
 .use(serveStatic(__dirname + "/../frontend"))
 .use(serveStatic(__dirname + '/../resources/images'))
+.use(serveStatic(__dirname + '/../resources/sounds'))
 .listen(8080);
 console.log("Static files server listening at http://%s:%s", "localhost", 8080)
