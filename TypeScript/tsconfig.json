@@ -6,11 +6,11 @@
         "preserveConstEnums": true,
         "declaration": true,
         "sourceMap": true,
-        "watch": false,
+        "watch": true,
         "isolatedModules": false
     },
     "files": [
-        "typescript/Unit.ts",
+        "typescript/IUnit.ts",
         "typescript/Knight.ts",
         "typescript/UnitsModule.ts"
     ]

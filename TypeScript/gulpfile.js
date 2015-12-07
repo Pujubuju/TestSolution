@@ -12,13 +12,6 @@ gulp.task('default', function () {
   return gutil.log('Gulp is running!');
 });
 
-gulp.task('build', function(callback) {
-  runSequence('build-clean',
-              ['build-scripts', 'build-styles'],
-              'build-html',
-              callback);
-});
-
 gulp.task('Build solution and run tests', 
 gulpSequence('Build solution', 'Run tests'));
 

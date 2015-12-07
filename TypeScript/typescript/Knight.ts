@@ -1,4 +1,4 @@
-import unit = require("./Unit");
+import iunit = require("./IUnit");
 
 export class Knight {
 
@@ -10,7 +10,7 @@ export class Knight {
 		this.dmg = dmg;
 	}
 
-	attack(target: unit.Unit) {
+	attack(target: iunit.IUnit) {
 		target.decreaseHp(this.dmg);
 	}
 
