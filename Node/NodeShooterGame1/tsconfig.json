@@ -12,6 +12,9 @@
     "files": [
         "typescript/Knight.ts",
         "typescript/UnitsModule.ts",
-        "typescript/ObjectViewModel.ts"
+        "typescript/Models/ObjectViewModel.ts",
+        "typescript/Models/NameImagePair.ts",
+        "typescript/Services/ImagesService.ts",
+        "typescript/Services/ServicesModule.ts"
     ]
 }

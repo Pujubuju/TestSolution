@@ -1,13 +1,10 @@
-module Models {
+export class NameImagePair {
 
-	export class NameImagePair {
+	name: string;
+	img: any;
 
-		name: string;
-		img: any;
-
-		constructor(name: string, img: any) {
-			this.name = name;
-			this.img = img;
-		}
+	constructor(name: string, img: any) {
+		this.name = name;
+		this.img = img;
 	}
 }

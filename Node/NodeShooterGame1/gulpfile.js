@@ -27,6 +27,6 @@ gulp.task('Build solution', function () {
 
 // run tests task
 gulp.task('Run tests', function () {
-    return gulp.src(['tests/*.js', 'tests/typescript/*.js'])
+    return gulp.src(['tests/*.js', 'tests/typescript/*.js', 'tests/typescript/services/*.js'])
         .pipe(jasmine());
 });
