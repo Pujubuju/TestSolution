@@ -39,7 +39,7 @@ namespace DashboardApp.OwinSelfHost
 
         private static string GetUrl(string ip, int port)
         {
-            return string.Format("http://{0}:{1}", ip, port);
+            return string.Format("https://{0}:{1}", ip, port);
         }
 
     }
