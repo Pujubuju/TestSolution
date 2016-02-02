@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 
 namespace SpecflowTutorial.Steps
 {
@@ -11,7 +14,7 @@ namespace SpecflowTutorial.Steps
         private readonly Calculator _calculator = new Calculator();
         private int a, b, c;
         private ArgumentOutOfRangeException _divideByZeroException;
-
+            
         [Given(@"I have entered (.*) into the calculator")]
         public void GivenIHaveEnteredIntoTheCalculator(int p0)
         {

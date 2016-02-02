@@ -8,3 +8,18 @@ Scenario: Add two numbers
 	And I have also entered 70 into the calculator
 	When I press add
 	Then the result should be 120 on the screen
+
+	Given I have entered 20 into the calculator
+	And I have also entered 67 into the calculator
+	When I press add
+	Then the result should be 87 on the screen
+
+	Given I have entered -30 into the calculator
+	And I have also entered 30 into the calculator
+	When I press add
+	Then the result should be 0 on the screen
+
+	Given I have entered -30 into the calculator
+	And I have also entered -30 into the calculator
+	When I press add
+	Then the result should be -60 on the screen

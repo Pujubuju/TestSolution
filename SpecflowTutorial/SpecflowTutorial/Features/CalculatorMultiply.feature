@@ -8,3 +8,8 @@ Scenario: Multiply two numbers
 	And I have also entered 9 into the calculator
 	When I press multiply
 	Then the result should be 72 on the screen
+
+	Given I have entered 10 into the calculator
+	And I have also entered -2 into the calculator
+	When I press multiply
+	Then the result should be -20 on the screen
