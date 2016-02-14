@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using MyLibrary;
 
 namespace NetCoreTutorial
 {
@@ -9,6 +7,13 @@ namespace NetCoreTutorial
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("Hellow world from .net Core! :)");
+
+            MyClass myClass = new MyClass();
+
+            Console.WriteLine(myClass.Greet());
+
+            Console.ReadKey();
         }
     }
 }

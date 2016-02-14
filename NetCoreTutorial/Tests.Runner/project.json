@@ -1,6 +1,6 @@
-{
+﻿{
   "version": "1.0.0-*",
-  "description": "NetCoreTutorial Console Application",
+  "description": "Tests.Runner Console Application",
   "authors": [ "Pujubuju" ],
   "tags": [ "" ],
   "projectUrl": "",
@@ -11,11 +11,11 @@
   },
 
   "dependencies": {
-    "MyLibrary": "1.0.0-*"
+    "NUnit.Runners": "3.0.1"
   },
 
   "commands": {
-    "NetCoreTutorial": "NetCoreTutorial"
+    "Tests.Runner": "Tests.Runner"
   },
 
   "frameworks": {

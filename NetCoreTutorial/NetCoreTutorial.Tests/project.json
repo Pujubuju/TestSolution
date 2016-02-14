@@ -1,23 +1,10 @@
-{
+﻿{
   "version": "1.0.0-*",
-  "description": "NetCoreTutorial Console Application",
+  "description": "NetCoreTutorial.Tests Class Library",
   "authors": [ "Pujubuju" ],
   "tags": [ "" ],
   "projectUrl": "",
   "licenseUrl": "",
-
-  "compilationOptions": {
-    "emitEntryPoint": true
-  },
-
-  "dependencies": {
-    "MyLibrary": "1.0.0-*"
-  },
-
-  "commands": {
-    "NetCoreTutorial": "NetCoreTutorial"
-  },
-
   "frameworks": {
     "dnxcore50": {
       "dependencies": {
@@ -28,5 +15,13 @@
         "System.Threading": "4.0.11-beta-23516"
       }
     }
+  },
+  "dependencies": {
+    "MyLibrary": "1.0.0-*",
+    "xunit": "2.1.0",
+    "xunit.runner.dnx": "2.1.0-rc1-build204"
+  },
+  "commands": {
+    "test": "xunit.runner.dnx"
   }
 }

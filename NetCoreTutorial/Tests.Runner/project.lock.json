@@ -30,15 +30,13 @@
           "lib/dotnet5.4/Microsoft.CSharp.dll": {}
         }
       },
-      "MyLibrary/1.0.0": {
-        "type": "project",
-        "framework": "DNXCore,Version=v5.0",
+      "NUnit.Console/3.0.1": {
+        "type": "package"
+      },
+      "NUnit.Runners/3.0.1": {
+        "type": "package",
         "dependencies": {
-          "Microsoft.CSharp": "4.0.1-beta-23516",
-          "System.Collections": "4.0.11-beta-23516",
-          "System.Console": "4.0.0-beta-23516",
-          "System.Linq": "4.0.1-beta-23516",
-          "System.Threading": "4.0.11-beta-23516"
+          "NUnit.Console": "[3.0.1]"
         }
       },
       "System.Collections/4.0.11-beta-23516": {
@@ -332,15 +330,13 @@
           "lib/dotnet5.4/Microsoft.CSharp.dll": {}
         }
       },
-      "MyLibrary/1.0.0": {
-        "type": "project",
-        "framework": "DNXCore,Version=v5.0",
+      "NUnit.Console/3.0.1": {
+        "type": "package"
+      },
+      "NUnit.Runners/3.0.1": {
+        "type": "package",
         "dependencies": {
-          "Microsoft.CSharp": "4.0.1-beta-23516",
-          "System.Collections": "4.0.11-beta-23516",
-          "System.Console": "4.0.0-beta-23516",
-          "System.Linq": "4.0.1-beta-23516",
-          "System.Threading": "4.0.11-beta-23516"
+          "NUnit.Console": "[3.0.1]"
         }
       },
       "runtime.win7.System.Console/4.0.0-beta-23516": {
@@ -703,15 +699,13 @@
           "lib/dotnet5.4/Microsoft.CSharp.dll": {}
         }
       },
-      "MyLibrary/1.0.0": {
-        "type": "project",
-        "framework": "DNXCore,Version=v5.0",
+      "NUnit.Console/3.0.1": {
+        "type": "package"
+      },
+      "NUnit.Runners/3.0.1": {
+        "type": "package",
         "dependencies": {
-          "Microsoft.CSharp": "4.0.1-beta-23516",
-          "System.Collections": "4.0.11-beta-23516",
-          "System.Console": "4.0.0-beta-23516",
-          "System.Linq": "4.0.1-beta-23516",
-          "System.Threading": "4.0.11-beta-23516"
+          "NUnit.Console": "[3.0.1]"
         }
       },
       "runtime.win7.System.Console/4.0.0-beta-23516": {
@@ -1048,10 +1042,6 @@
     }
   },
   "libraries": {
-    "MyLibrary/1.0.0": {
-      "type": "project",
-      "path": "../MyLibrary/project.json"
-    },
     "Microsoft.CSharp/4.0.1-beta-23516": {
       "type": "package",
       "serviceable": true,
@@ -1100,6 +1090,45 @@
         "ref/wpa81/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._"
+      ]
+    },
+    "NUnit.Console/3.0.1": {
+      "type": "package",
+      "sha512": "6KBToQCNM2kdLb56iHHlStECA0JVAyX/dsjsVtYEjyIKhwceEZZxSZnfYWNfKucrbsP2qQFhSc+W4anBeppH9A==",
+      "files": [
+        "CHANGES.txt",
+        "LICENSE.txt",
+        "NOTICES.txt",
+        "NUnit.Console.3.0.1.nupkg",
+        "NUnit.Console.3.0.1.nupkg.sha512",
+        "NUnit.Console.nuspec",
+        "tools/addins/nunit.core.dll",
+        "tools/addins/nunit.core.interfaces.dll",
+        "tools/addins/nunit.v2.driver.dll",
+        "tools/addins/nunit-project-loader.dll",
+        "tools/addins/nunit-v2-result-writer.dll",
+        "tools/addins/vs-project-loader.dll",
+        "tools/Mono.Cecil.dll",
+        "tools/nunit.engine.addin.xml",
+        "tools/nunit.engine.addins",
+        "tools/nunit.engine.api.dll",
+        "tools/nunit.engine.api.xml",
+        "tools/nunit.engine.dll",
+        "tools/nunit3-console.exe",
+        "tools/nunit3-console.exe.config",
+        "tools/nunit-agent.exe",
+        "tools/nunit-agent.exe.config",
+        "tools/nunit-agent-x86.exe",
+        "tools/nunit-agent-x86.exe.config"
+      ]
+    },
+    "NUnit.Runners/3.0.1": {
+      "type": "package",
+      "sha512": "tawjVQBs1ijjreRlttYPVn2OICltUG7glxmpzW4UqI/ntneHaSLO6Ltyzd3b3xq8WMcGUdLyBUngPMNpeI0ZQg==",
+      "files": [
+        "NUnit.Runners.3.0.1.nupkg",
+        "NUnit.Runners.3.0.1.nupkg.sha512",
+        "NUnit.Runners.nuspec"
       ]
     },
     "runtime.win7.System.Console/4.0.0-beta-23516": {
@@ -2169,7 +2198,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "MyLibrary >= 1.0.0-*"
+      "NUnit.Runners >= 3.0.1"
     ],
     "DNXCore,Version=v5.0": [
       "Microsoft.CSharp >= 4.0.1-beta-23516",

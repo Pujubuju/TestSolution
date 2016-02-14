@@ -1,22 +1,10 @@
-{
+﻿{
   "version": "1.0.0-*",
-  "description": "NetCoreTutorial Console Application",
+  "description": "MyLibrary Class Library",
   "authors": [ "Pujubuju" ],
   "tags": [ "" ],
   "projectUrl": "",
   "licenseUrl": "",
-
-  "compilationOptions": {
-    "emitEntryPoint": true
-  },
-
-  "dependencies": {
-    "MyLibrary": "1.0.0-*"
-  },
-
-  "commands": {
-    "NetCoreTutorial": "NetCoreTutorial"
-  },
 
   "frameworks": {
     "dnxcore50": {

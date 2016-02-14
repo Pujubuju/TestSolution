@@ -30,17 +30,6 @@
           "lib/dotnet5.4/Microsoft.CSharp.dll": {}
         }
       },
-      "MyLibrary/1.0.0": {
-        "type": "project",
-        "framework": "DNXCore,Version=v5.0",
-        "dependencies": {
-          "Microsoft.CSharp": "4.0.1-beta-23516",
-          "System.Collections": "4.0.11-beta-23516",
-          "System.Console": "4.0.0-beta-23516",
-          "System.Linq": "4.0.1-beta-23516",
-          "System.Threading": "4.0.11-beta-23516"
-        }
-      },
       "System.Collections/4.0.11-beta-23516": {
         "type": "package",
         "dependencies": {
@@ -330,17 +319,6 @@
         },
         "runtime": {
           "lib/dotnet5.4/Microsoft.CSharp.dll": {}
-        }
-      },
-      "MyLibrary/1.0.0": {
-        "type": "project",
-        "framework": "DNXCore,Version=v5.0",
-        "dependencies": {
-          "Microsoft.CSharp": "4.0.1-beta-23516",
-          "System.Collections": "4.0.11-beta-23516",
-          "System.Console": "4.0.0-beta-23516",
-          "System.Linq": "4.0.1-beta-23516",
-          "System.Threading": "4.0.11-beta-23516"
         }
       },
       "runtime.win7.System.Console/4.0.0-beta-23516": {
@@ -703,17 +681,6 @@
           "lib/dotnet5.4/Microsoft.CSharp.dll": {}
         }
       },
-      "MyLibrary/1.0.0": {
-        "type": "project",
-        "framework": "DNXCore,Version=v5.0",
-        "dependencies": {
-          "Microsoft.CSharp": "4.0.1-beta-23516",
-          "System.Collections": "4.0.11-beta-23516",
-          "System.Console": "4.0.0-beta-23516",
-          "System.Linq": "4.0.1-beta-23516",
-          "System.Threading": "4.0.11-beta-23516"
-        }
-      },
       "runtime.win7.System.Console/4.0.0-beta-23516": {
         "type": "package",
         "dependencies": {
@@ -1048,10 +1015,6 @@
     }
   },
   "libraries": {
-    "MyLibrary/1.0.0": {
-      "type": "project",
-      "path": "../MyLibrary/project.json"
-    },
     "Microsoft.CSharp/4.0.1-beta-23516": {
       "type": "package",
       "serviceable": true,
@@ -2168,9 +2131,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "": [
-      "MyLibrary >= 1.0.0-*"
-    ],
+    "": [],
     "DNXCore,Version=v5.0": [
       "Microsoft.CSharp >= 4.0.1-beta-23516",
       "System.Collections >= 4.0.11-beta-23516",
