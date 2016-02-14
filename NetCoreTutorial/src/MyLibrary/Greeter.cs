@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Tests.Runner
+namespace MyLibrary
 {
-    public class Program
+    public class Greeter
     {
-        public static void Main(string[] args)
+
+        public string Greet()
         {
-
-
+            return "Good moring Master!";
         }
+
     }
 }

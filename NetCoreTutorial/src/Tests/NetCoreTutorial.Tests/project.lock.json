@@ -3533,7 +3533,7 @@
   "libraries": {
     "MyLibrary/1.0.0": {
       "type": "project",
-      "path": "../src/MyLibrary/project.json"
+      "path": "../../MyLibrary/project.json"
     },
     "Microsoft.CSharp/4.0.1-beta-23516": {
       "type": "package",

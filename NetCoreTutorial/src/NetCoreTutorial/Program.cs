@@ -9,9 +9,9 @@ namespace NetCoreTutorial
         {
             Console.WriteLine("Hellow world from .net Core! :)");
 
-            MyClass myClass = new MyClass();
+            Greeter greeter = new Greeter();
 
-            Console.WriteLine(myClass.Greet());
+            Console.WriteLine(greeter.Greet());
 
             Console.ReadKey();
         }
